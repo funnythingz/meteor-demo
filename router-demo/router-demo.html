@@ -1,0 +1,37 @@
+<head>
+  <title>router-demo</title>
+</head>
+
+<template name="layout">
+  {{> navigation}}
+  <div class="container">
+    {{> yield}}
+  </div>
+</template>
+
+<template name="navigation">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li><a href="{{pathFor 'home'}}">Home</a></li>
+        <li><a href="{{pathFor 'about'}}">About</a></li>
+      </ul>
+    </div>
+  </nav>
+</template>
+
+<template name="notFound">
+  <h1>not found</h1>
+</template>
+
+<template name="home">
+  <h1>Welcome!!</h1>
+</template>
+
+<template name="about">
+  <h1>About me</h1>
+</template>
+
+<template name="show">
+  <h1>{{.}}</h1>
+</template>
